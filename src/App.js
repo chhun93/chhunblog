@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import HeaderLg from "./Header/LargeHeader";
-import Posts from "./Contents/Posts";
+import Contents from "./Contents/Contents";
 import './DecorateFiles/App.css'
 import 'bootstrap/dist/css/bootstrap.min.css';
 
@@ -9,7 +9,7 @@ class App extends Component {
     return (
       <div>
         <HeaderLg />
-        <Posts />
+        <Contents />
       </div>
     );
   }

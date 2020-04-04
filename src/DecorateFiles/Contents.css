@@ -6,6 +6,7 @@
     border-color: black;
     border-style: solid;
     text-align: center;
+    min-height: 60px;
 }
 
 .col:hover{
