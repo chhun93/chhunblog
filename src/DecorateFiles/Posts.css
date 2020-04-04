@@ -1,0 +1,13 @@
+.col{    
+    color : gray;
+    margin-top: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
+    border-color: black;
+    border-style: solid;
+    text-align: center;
+}
+
+.col:hover{
+    color :white;
+}
