@@ -1,14 +1,14 @@
 import React, { Component } from "react";
-import Header_Large from "./Header/Header_Large";
-import Body from "./Components/Body";
-import "./App.css";
+import HeaderLg from "./Header/HeaderLg";
+import Content from "./Components/Content";
+import "./DecorateFiles/App.css";
 
 class App extends Component {
   render = () => {
     return (
       <div>
-        <Header_Large />
-        <Body />
+        <HeaderLg />
+        <Content />
       </div>
     );
   };

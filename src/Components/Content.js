@@ -2,36 +2,34 @@ import React, { Component } from "react";
 import axios from "axios";
 import Posts from "./Posts";
 import { Spinner } from "react-bootstrap";
-import "../DecorateFiles/Body.css";
+import "../DecorateFiles/Content.css";
 
-class Body extends Component {
+class Content extends Component {
   state = {
     postList: [],
     isLoading: true,
-    pageDown: 0,
   };
-
+  // api 주소
+  //"https://jsonplaceholder.typicode.com/posts"
   getPosts = async () => {
+    //여기서 postList는 state변수를 가리키는것이 아님??
     const { data: postList } = await axios.get(
       "https://jsonplaceholder.typicode.com/posts"
     );
-    console.log("Readed");
     this.setState({ postList, isLoading: false });
+    console.log("Readed : " + this.state.postList.length + "개");
   };
 
   componentDidMount() {
     this.getPosts();
   }
 
-  clickBodyContainer() {}
-
   render() {
     const postListMap = this.state.postList.map((post) => (
       <Posts key={post.id} title={post.title} body={post.body} />
     ));
-
     return (
-      <div className="bodyContainer" onClick={this.clickBodyContainer}>
+      <div className="contentContainer">
         {this.state.isLoading ? (
           <Spinner
             className="loadingSpinner"
@@ -39,11 +37,11 @@ class Body extends Component {
             role="status"
           />
         ) : (
-          <div className="bodyPostBox">{postListMap}</div>
+          <div className="contentPostBox">{postListMap}</div>
         )}
       </div>
     );
   }
 }
 
-export default Body;
+export default Content;

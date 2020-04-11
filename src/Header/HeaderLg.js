@@ -1,8 +1,8 @@
 import React, { Component } from "react";
 import { Navbar, Nav, FormControl, Button, Form } from "react-bootstrap";
-import "../DecorateFiles/Header_Large.css";
+import "../DecorateFiles/HeaderLg.css";
 
-class Header_Large extends Component {
+class HeaderLg extends Component {
   state = {
     modal: false,
     NaviListTwo: "test2",
@@ -11,19 +11,21 @@ class Header_Large extends Component {
     this.setState({
       modal: !this.state.modal,
     });
-    {
-      this.state.modal
-        ? this.setState({
-            NaviListTwo: "test2",
-          })
-        : this.setState({
-            NaviListTwo: "test3",
-          });
-    }
+
+    this.state.modal
+      ? this.setState({
+          NaviListTwo: "test2",
+        })
+      : this.setState({
+          NaviListTwo: "test3",
+        });
   };
+
+  clickWriteBtn = () => {};
+
   render() {
     return (
-      <div className = "LgHeaderBar">
+      <div className="LgHeaderBar">
         <Navbar bg="dark" variant="dark">
           <Navbar.Brand href="/">Hello_Header</Navbar.Brand>
           <Nav className="mr-auto">
@@ -38,6 +40,9 @@ class Header_Large extends Component {
               {this.state.NaviListTwo}
             </Nav.Link>
             <Nav.Link className="NaviListThree">test4</Nav.Link>
+            <Button variant="outline-info" onClick={this.clickWriteBtn}>
+              WRITE
+            </Button>
           </Nav>
           <Form inline>
             <FormControl type="text" placeholder="Search" className="mr-sm-2" />
@@ -49,4 +54,4 @@ class Header_Large extends Component {
   }
 }
 
-export default Header_Large;
+export default HeaderLg;
