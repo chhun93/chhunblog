@@ -1,18 +1,17 @@
 import React, { Component } from "react";
-import HeaderLg from "./Header/LargeHeader";
-import Contents from "./Contents/Contents";
-import './DecorateFiles/App.css'
-import 'bootstrap/dist/css/bootstrap.min.css';
+import Header_Large from "./Header/Header_Large";
+import Body from "./Components/Body";
+import "./App.css";
 
 class App extends Component {
-  render() {
+  render = () => {
     return (
       <div>
-        <HeaderLg />
-        <Contents />
+        <Header_Large />
+        <Body />
       </div>
     );
-  }
+  };
 }
 
 export default App;

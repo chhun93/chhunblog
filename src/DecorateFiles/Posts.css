@@ -1,0 +1,17 @@
+.postBox{    
+    margin : 10px;
+    border-color: black;
+    border-style: solid;
+    text-align: center;
+}
+
+.postTitle{
+    border-bottom-style: solid ;
+    border-bottom-color: #3d3d3d;
+    font-size: 10pt;
+    text-align: center;
+}
+
+.postBody{
+    font-size: 9pt;
+}

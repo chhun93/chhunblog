@@ -1,0 +1,11 @@
+.bodyContainer{
+    margin : 0px;
+    -webkit-font-smoothing: antialiased;
+}
+
+.bodyContainer .loadingSpinner{
+    color : red;
+}
+
+.bodyContainer .bodyPostBox{
+}
