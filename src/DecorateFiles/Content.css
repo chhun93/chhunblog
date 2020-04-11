@@ -1,8 +1,19 @@
-.contentBodyContainer{
-    margin : 0px;
-    -webkit-font-smoothing: antialiased;
+* {
+    box-sizing: inherit;
 }
 
-.contentBodyContainer .loadingSpinner{
+.contentContainer{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.contentContainer .loadingSpinner{
     color : red;
+}
+
+.indexBtn{
+    margin-left: 50%;
+}
+.experssIdx{
+    width: 80px;
 }
