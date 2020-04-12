@@ -5,10 +5,8 @@
 .contentContainer{
     display: flex;
     flex-wrap: wrap;
-}
-
-.contentContainer .loadingSpinner{
-    color : red;
+    height: 100%;
+    margin:0px;
 }
 
 .indexBtn{

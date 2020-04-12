@@ -5,25 +5,24 @@
                 0 -6px 16px -6px rgba(0, 0, 0, 0.025);
     display: inline-flex;
     flex-direction: column;
-    border-radius: 4px;
+    border-radius: .3rem;
     margin: 1rem;
+    padding: 1em;
     overflow: hidden;
-    border-style: solid;
-    border-color: #cccccc;        
     transition: 0.25s; /* transition 효과 0.25초 */
 }
 
 .postBox:hover{
     cursor: pointer;
 	transform: translateY(-5px); /* Y축으로-5px */
-	background: #eeeeee;
+    background: #eeeeee;
     transition-duration: 0.5s;
 }
 
 .postTitle{
     min-height: 3rem;
     border-bottom-style: solid ;
-    border-bottom-color: #9c9696;
+    border-bottom-color: #eeeeef;
     font-size: 10pt;
     text-align: center;
 }

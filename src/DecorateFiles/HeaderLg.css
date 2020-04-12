@@ -3,3 +3,14 @@
     left: 0px;
     width : 100%;
 }
+
+.nav-link{
+    color: #4fd66e;
+}
+
+.nav-link:hover{
+    color:white;
+    background-color: #4fd66e;
+    border-radius: 3rem;
+    border-style: solid;
+}

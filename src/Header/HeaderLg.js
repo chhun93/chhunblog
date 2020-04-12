@@ -1,54 +1,19 @@
 import React, { Component } from "react";
-import { Navbar, Nav, FormControl, Button, Form } from "react-bootstrap";
+import { Navbar, Nav } from "react-bootstrap";
 import "../DecorateFiles/HeaderLg.css";
-
+import WritePost from "../Components/WritePost";
 class HeaderLg extends Component {
-  state = {
-    modal: false,
-    NaviListTwo: "test2",
-  };
-  toggle = () => {
-    this.setState({
-      modal: !this.state.modal,
-    });
-
-    this.state.modal
-      ? this.setState({
-          NaviListTwo: "test2",
-        })
-      : this.setState({
-          NaviListTwo: "test3",
-        });
-  };
-
-  clickWriteBtn = () => {};
-
   render() {
     return (
       <div className="LgHeaderBar">
-        <Navbar bg="dark" variant="dark">
-          <Navbar.Brand href="/">Hello_Header</Navbar.Brand>
-          <Nav className="mr-auto">
-            <Nav.Link
-              variant="dark"
-              className="NaviListOne"
-              onClick={this.toggle}
-            >
-              test1
-            </Nav.Link>
-            <Nav.Link className="NaviListTwo">
-              {this.state.NaviListTwo}
-            </Nav.Link>
-            <Nav.Link className="NaviListThree">test4</Nav.Link>
-            <Button variant="outline-info" onClick={this.clickWriteBtn}>
-              WRITE
-            </Button>
-          </Nav>
-          <Form inline>
-            <FormControl type="text" placeholder="Search" className="mr-sm-2" />
-            <Button variant="outline-info">Search</Button>
-          </Form>
+        <Navbar bg="white" className="justify-content-center">
+          <Navbar.Brand href="/">TestHome</Navbar.Brand>
         </Navbar>
+        <Nav>
+          <Nav.Link href = "/writePost">TEST1</Nav.Link>
+          <Nav.Link>TEST2</Nav.Link>
+          <Nav.Link>TEST3</Nav.Link>
+        </Nav>
       </div>
     );
   }

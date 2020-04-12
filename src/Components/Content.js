@@ -37,22 +37,18 @@ class Content extends Component {
     this.setState({
       contentIdx: contentIdx + 1,
       postStart: postStart + postCnt,
-      postEnd: postEnd + postCnt,
+      postEnd: (postEnd + postCnt)%(postList.length+1),
     });
   };
   changeIdxDown = () => {
     const { contentIdx, postCnt, postStart, postEnd } = this.state;
-    if (postStart === 0) {
-      console.log("x");
-      return;
-    }
+    if (postStart === 0) return;
     this.setState({
       contentIdx: contentIdx - 1,
       postStart: postStart - postCnt,
       postEnd: postEnd - postCnt,
     });
   };
-
   render() {
     const postListMap = this.state.postList.map((post) => (
       <Posts key={post.id} title={post.title} body={post.body} />
@@ -61,27 +57,21 @@ class Content extends Component {
     return (
       <div className="contentContainer">
         {isLoading ? (
-          <Spinner
-            className="loadingSpinner"
-            animation="border"
-            role="status"
-          />
+          <Spinner variant="primary" animation="border" role="status" />
         ) : (
           <div className="contentPostBox">
             {postListMap.slice(postStart, postEnd)}
           </div>
         )}
-        <ButtonGroup className="indexBtn" variant="secondary">
-          <Button variant="secondary" onClick={this.changeIdxDown}>
-            {" "}
-            &lt;{" "}
+        <ButtonGroup size="sm" className="indexBtn">
+          <Button variant="success" onClick={this.changeIdxDown}>
+            &lt;
           </Button>
-          <Button className="experssIdx" variant="secondary">
+          <Button className="experssIdx" variant="success">
             {postStart}~{postEnd}
           </Button>
-          <Button variant="secondary" onClick={this.changeIdxUp}>
-            {" "}
-            &gt;{" "}
+          <Button variant="success" onClick={this.changeIdxUp}>
+            &gt;
           </Button>
         </ButtonGroup>
       </div>
