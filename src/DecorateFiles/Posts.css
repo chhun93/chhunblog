@@ -15,8 +15,8 @@
 .postBox:hover{
     cursor: pointer;
 	transform: translateY(-5px); /* Y축으로-5px */
-    background: #eeeeee;
     transition-duration: 0.5s;
+    background: #eeeeee;
 }
 
 .postTitle{
@@ -29,5 +29,5 @@
 
 .postBody{
     font-size: 9pt;
-    min-height: 5rem;
+    min-height: 8rem;
 }

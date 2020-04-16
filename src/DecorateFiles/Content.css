@@ -1,17 +1,17 @@
 * {
     box-sizing: inherit;
 }
-
-.contentContainer{
+.contentBody{
     display: flex;
     flex-wrap: wrap;
     height: 100%;
     margin:0px;
 }
-
-.indexBtn{
-    margin-left: 50%;
+.loadingImg{
+    margin: auto;
 }
-.experssIdx{
-    width: 80px;
+.indexBtn{
+    position: absolute; 
+    left: 50%; 
+    transform: translateX(-50%);
 }

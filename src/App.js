@@ -3,15 +3,15 @@ import { HashRouter, Route } from "react-router-dom";
 import HeaderLg from "./Header/HeaderLg";
 import Content from "./Components/Content";
 import WritePost from "./Components/WritePost";
-import "./DecorateFiles/App.css";
 
 class App extends Component {
   render = () => {
     return (
-      <div>
-      <HeaderLg/>
-      <Content/>
-      </div>
+      <HashRouter>
+        <HeaderLg/>
+        <Route path="/" exact={true} component={Content} />
+        <Route path="/writePost" component={WritePost} />
+      </HashRouter>
     );
   };
 }

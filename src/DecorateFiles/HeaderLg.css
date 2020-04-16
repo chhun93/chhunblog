@@ -3,14 +3,34 @@
     left: 0px;
     width : 100%;
 }
-
+.navbar-brand:hover { 
+    animation-duration: 3s; 
+    animation-name: rainbowLink; 
+    animation-iteration-count: infinite; 
+} 
 .nav-link{
     color: #4fd66e;
+    border-radius: 3rem;
+    transition: 1s;
 }
 
 .nav-link:hover{
     color:white;
     background-color: #4fd66e;
-    border-radius: 3rem;
-    border-style: solid;
+    transition-duration:1s;
 }
+
+
+@keyframes rainbowLink {     
+    0% { color: #ff0000; }
+    15% { color: #ff7a2a; }
+    30% { color: #ffc52a; }
+    45% { color: #4fd66e; }
+    60% { color: #2a89ff; }
+    75% { color: #202082; }
+    90% { color: #6b2aff; } 
+    100% { color: #e82aff; }
+}
+
+
+   
