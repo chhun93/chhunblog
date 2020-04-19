@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { FormControl, Button, ButtonGroup } from "react-bootstrap";
-import "../DecorateFiles/WritePost.css";
+import "../../DecorateFiles/WritePost.css";
 
 class WritePost extends Component {
   state = {

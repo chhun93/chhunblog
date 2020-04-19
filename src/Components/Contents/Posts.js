@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { Modal, Button } from "react-bootstrap";
-import "../DecorateFiles/Posts.css";
+import "../../DecorateFiles/Posts.css";
 
 class Posts extends Component {
   constructor(props) {

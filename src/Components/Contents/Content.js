@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import { Spinner, ButtonGroup, Button } from "react-bootstrap";
 import axios from "axios";
 import Posts from "./Posts";
-import "../DecorateFiles/Content.css";
+import "../../DecorateFiles/Content.css";
 
 class Content extends Component {
   state = {
