@@ -15,16 +15,13 @@ class Content extends Component {
   };
 
   getPosts = async () => {
-    //여기서 postList는 state변수를 가리키는것이 아님??
     // const response = await axios.get(
     //   "https://jsonplaceholder.typicode.com/posts"
     // );
-
     // const postList = response.data;
-
-
     const { data: postList } = await axios.get(
-      "https://jsonplaceholder.typicode.com/posts"
+      //"https://jsonplaceholder.typicode.com/posts"
+      "http://localhost:3001/api"
     );
 
     

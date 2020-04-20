@@ -7,6 +7,11 @@ class WritePost extends Component {
     wtitle: "",
     wcontent: "",
   };
+  writeChange = (e) => {
+    this.setState({
+      [e.target.name]: e.target.value,
+    });
+  };
   render() {
     return (
       <div className="wContainer">
@@ -14,8 +19,16 @@ class WritePost extends Component {
           className="wTitle"
           placeholder="제목 35글자"
           maxLength="35"
+          name="wtitle"
+          onChange={this.writeChange}
         />
-        <FormControl className="wContent" as="textarea" placeholder="본문" />
+        <FormControl
+          className="wContent"
+          as="textarea"
+          placeholder="본문"
+          name="wcontent"
+          onChange={this.writeChange}
+        />
         <ButtonGroup className="d-flex justify-content-end">
           <Button
             className="mr-5 ml-5"
