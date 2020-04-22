@@ -19,6 +19,11 @@ app.use("/api", (req, res) =>
       title: "test2_title",
       body: "test2_body",
     },
+    {
+      id: 3,
+      title: "test3_title",
+      body: "test3_body",
+    }
   ])
 );
 
