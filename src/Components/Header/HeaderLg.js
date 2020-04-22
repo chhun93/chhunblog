@@ -8,7 +8,9 @@ class HeaderLg extends Component {
     return (
       <div className="LgHeaderBar">
         <Navbar bg="white" className="justify-content-center">
-          <Navbar.Brand className="mr-0" href="/">TestHome</Navbar.Brand>
+          <Link className="navbar-brand mr-0" to="/">
+            TestHome
+          </Link>
         </Navbar>
         <Nav className="justify-content-center">
           <Link className="nav-link" to="/writePost">
