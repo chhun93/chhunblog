@@ -1,0 +1,25 @@
+{
+  "files": {
+    "main.css": "/chhunblog/static/css/main.8351165f.chunk.css",
+    "main.js": "/chhunblog/static/js/main.81301224.chunk.js",
+    "main.js.map": "/chhunblog/static/js/main.81301224.chunk.js.map",
+    "runtime-main.js": "/chhunblog/static/js/runtime-main.b1a9f4b7.js",
+    "runtime-main.js.map": "/chhunblog/static/js/runtime-main.b1a9f4b7.js.map",
+    "static/css/2.de424728.chunk.css": "/chhunblog/static/css/2.de424728.chunk.css",
+    "static/js/2.cdf5acc6.chunk.js": "/chhunblog/static/js/2.cdf5acc6.chunk.js",
+    "static/js/2.cdf5acc6.chunk.js.map": "/chhunblog/static/js/2.cdf5acc6.chunk.js.map",
+    "index.html": "/chhunblog/index.html",
+    "precache-manifest.2ea4c02612cc36cc6ef4e84fe52681b2.js": "/chhunblog/precache-manifest.2ea4c02612cc36cc6ef4e84fe52681b2.js",
+    "service-worker.js": "/chhunblog/service-worker.js",
+    "static/css/2.de424728.chunk.css.map": "/chhunblog/static/css/2.de424728.chunk.css.map",
+    "static/css/main.8351165f.chunk.css.map": "/chhunblog/static/css/main.8351165f.chunk.css.map",
+    "static/js/2.cdf5acc6.chunk.js.LICENSE.txt": "/chhunblog/static/js/2.cdf5acc6.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.b1a9f4b7.js",
+    "static/css/2.de424728.chunk.css",
+    "static/js/2.cdf5acc6.chunk.js",
+    "static/css/main.8351165f.chunk.css",
+    "static/js/main.81301224.chunk.js"
+  ]
+}
