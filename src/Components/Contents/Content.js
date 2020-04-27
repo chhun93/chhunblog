@@ -3,6 +3,7 @@ import { Spinner, ButtonGroup, Button } from "react-bootstrap";
 import axios from "axios";
 import Posts from "./Posts";
 import "../../DecorateFiles/Content.css";
+import PostJson from"../../Posts/Post.json";
 
 class Content extends Component {
   state = {
@@ -19,13 +20,12 @@ class Content extends Component {
     //   "https://jsonplaceholder.typicode.com/posts"
     // );
     // const postList = response.data;
-    const { data: postList } = await axios.get(
-      //"https://jsonplaceholder.typicode.com/posts"
-      "http://localhost:3001/api"
-    );
-
+    // const { data: postList } = await axios.get(
+    //   "https://jsonplaceholder.typicode.com/posts"
+    //   //"http://localhost:3001/api"
+    // );
     
-    this.setState({ postList, isLoading: false });
+    this.setState({ postList : PostJson, isLoading: false });
     console.log("Readed : " + this.state.postList.length + "개");
   };
 

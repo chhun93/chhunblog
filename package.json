@@ -22,9 +22,7 @@
     "redux": "^4.0.5"
   },
   "scripts": {
-    "start": "npm-run-all --parallel start:**",
-    "start:client": "react-scripts start",
-    "start:server": "nodemon ./src/Servers/Server.js",
+    "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
@@ -53,6 +51,5 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  },
-  "homepage": "http://chhun93.github.io/chhunblog"
+  }
 }
