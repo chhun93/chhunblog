@@ -1,13 +1,16 @@
 import React, { Component } from "react";
+import { connect } from "react-redux";
 import { Modal, Button } from "react-bootstrap";
 import "../../DecorateFiles/Posts.css";
+
+import { post_read,post_remove } from "../../Reducer/PostReducer";
 
 class Posts extends Component {
   constructor(props) {
     super(props);
     this.state = {
       modalFlag: false,
-      key: props.id,
+      key: props.postNo,
       title: props.title,
       body: props.body,
     };
@@ -24,7 +27,7 @@ class Posts extends Component {
     return (
       <div className="postBox">
         <div onClick={this.toggleModalFlag}>
-          <div className="postTitle">{title}</div>
+          <h4 className="postTitle">{title}</h4>
           <div className="postBody">{body}</div>
         </div>
         <Modal show={this.state.modalFlag} onHide={this.whythismake}>
@@ -41,7 +44,7 @@ class Posts extends Component {
               Close
             </Button>
             <Button size="sm" variant="success" onClick={this.toggleModalFlag}>
-              Save Changes
+              Delete
             </Button>
           </Modal.Footer>
         </Modal>

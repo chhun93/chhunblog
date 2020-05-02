@@ -24,11 +24,29 @@
     min-height: 3rem;
     border-bottom-style: solid ;
     border-bottom-color: #eeeeef;
-    font-size: 10pt;
-    text-align: center;
+    
+    line-height: 1.5;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    color: rgb(33, 37, 41);
+    margin: 0px 0px 0.25rem;
 }
 
 .postBody{
-    font-size: 9pt;
     min-height: 8rem;
+
+    word-break: break-word;
+    overflow-wrap: break-word;
+    font-size: 0.9rem;
+    line-height: 1.5;
+    height: 3.9375rem;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    text-overflow: ellipsis;
+    color: rgb(73, 80, 87);
+    margin: 0px 0px 1.5rem;
+    overflow: hidden;
 }
