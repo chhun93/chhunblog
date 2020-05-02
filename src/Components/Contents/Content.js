@@ -3,7 +3,7 @@ import { Spinner, ButtonGroup, Button } from "react-bootstrap";
 import axios from "axios";
 import Posts from "./Posts";
 import "../../DecorateFiles/Content.css";
-import PostJson from"../../Posts/Post.json";
+import PostJson from "../../Posts/Post.json";
 
 class Content extends Component {
   state = {
@@ -24,9 +24,10 @@ class Content extends Component {
     //   "https://jsonplaceholder.typicode.com/posts"
     //   //"http://localhost:3001/api"
     // );
-    
-    this.setState({ postList : PostJson, isLoading: false });
-    console.log("Readed : " + this.state.postList.length + "개");
+
+    this.setState({ postList: PostJson, isLoading: false });
+    //console.log("Readed : " + this.state.postList.length + "개");
+    console.log("Readed : " + PostJson.length + "개");
   };
 
   componentDidMount() {
@@ -63,7 +64,12 @@ class Content extends Component {
       i < this.state.postList.length;
       i++
     ) {
-      pagesBtn.push(<Button key={i} variant="success"> {i + 1} </Button>);
+      pagesBtn.push(
+        <Button key={i} variant="success">
+          {" "}
+          {i + 1}{" "}
+        </Button>
+      );
     }
     return pagesBtn;
   };
