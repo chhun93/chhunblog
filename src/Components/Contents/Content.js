@@ -16,14 +16,14 @@ class Content extends Component {
   componentDidMount() {
     setTimeout(() => {
       this.getPosts();
-    }, 2000);
+    }, 500);
   }
 
   render() {
     const { posts } = this.props;
 
     const postList = posts.map((posts) => (
-      <Posts key={posts.postNo} title={posts.title} body={posts.body} />
+      <Posts key={posts.postNo} posts = {posts} />
     ));
 
     return (

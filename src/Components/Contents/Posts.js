@@ -1,56 +1,31 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
-import { Modal, Button } from "react-bootstrap";
+import PostModal from "./PostModal";
 import "../../DecorateFiles/Posts.css";
 
-import { post_read,post_remove } from "../../Reducer/PostReducer";
+import { post_read, modal_up } from "../../Reducer/PostReducer";
 
 class Posts extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      modalFlag: false,
-      key: props.postNo,
-      title: props.title,
-      body: props.body,
-    };
-  }
-  toggleModalFlag = () => {
-    this.setState({
-      modalFlag: !this.state.modalFlag,
-    });
+  handleUpdatePost = (postNo) => {
+    this.props.dispatch(post_read(postNo), modal_up());
+    console.log(postNo);
   };
-  whythismake = () => {};
-  render() {
-    const { title, body } = this.state;
 
+  render() {
+    const posts = this.props.posts;
     return (
-      <div className="postBox">
-        <div onClick={this.toggleModalFlag}>
-          <h4 className="postTitle">{title}</h4>
-          <div className="postBody">{body}</div>
-        </div>
-        <Modal show={this.state.modalFlag} onHide={this.whythismake}>
-          <Modal.Header>
-            <Modal.Title>{title}</Modal.Title>
-          </Modal.Header>
-          <Modal.Body>{body}</Modal.Body>
-          <Modal.Footer>
-            <Button
-              size="sm"
-              variant="secondary"
-              onClick={this.toggleModalFlag}
-            >
-              Close
-            </Button>
-            <Button size="sm" variant="success" onClick={this.toggleModalFlag}>
-              Delete
-            </Button>
-          </Modal.Footer>
-        </Modal>
+      <div
+        className="postBox"
+        onClick={() => this.handleUpdatePost(posts.postNo)}
+      >
+        <h4 className="postTitle">{posts.title}</h4>
+        <div className="postBody">{posts.body}</div>
       </div>
     );
   }
 }
 
-export default Posts;
+let mapStateToProps = (state) => {
+  return { posts: state.posts };
+};
+export default connect(mapStateToProps)(Posts);
