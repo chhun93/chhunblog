@@ -1,6 +1,6 @@
 const POST_SAVE = "./Reducer/SAVE";
 const POST_REMOVE = "./Reducer/REMOVE";
-const POST_READ = "./Reducer/ONE";
+const POST_READ = "./Reducer/READ";
 const POST_LIST = "./Reducer/LIST";
 const MODAL_UP = "./Reducer/MODAL";
 
@@ -37,7 +37,6 @@ const initialState = {
 
 export default function PostReducer(state = initialState, action) {
   let posts = state.posts;
-
   switch (action.type) {
     case POST_SAVE:
       let data = action.data;
@@ -69,9 +68,10 @@ export default function PostReducer(state = initialState, action) {
         selectedPost: posts.find((postBox) => postBox.postNo === action.postNo),
       };
     case MODAL_UP:
-      let modalUp = state.modalUp;
-      if (modalUp) return { modalUp: false };
-      return { modalUp: true };
+      return{
+        ...state,
+        modalUp:!state.modalUp
+      }
     default:
       return state;
   }

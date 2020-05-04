@@ -2,6 +2,8 @@ import React, { Component } from "react";
 import { Spinner } from "react-bootstrap";
 import { connect } from "react-redux";
 import Posts from "./Posts";
+import PostModal from "./PostModal";
+
 import "../../DecorateFiles/Content.css";
 
 class Content extends Component {
@@ -23,12 +25,13 @@ class Content extends Component {
     const { posts } = this.props;
 
     const postList = posts.map((posts) => (
-      <Posts key={posts.postNo} posts = {posts} />
+      <Posts key={posts.postNo} posts={posts} />
     ));
 
     return (
       <div className="contentContainer">
         <div className="contentBody">
+        <PostModal/> 
           {this.state.isLoading ? (
             <div className="loadingImg">
               <Spinner variant="success" animation="border" role="status" />
