@@ -5,13 +5,18 @@ import { modal_up } from "../../Reducer/PostReducer";
 import "../../DecorateFiles/PostModal.css";
 
 class PostModal extends Component {
-  state = {};
+  state = {
+    modalUp : false,
+    selectedPost : {
+      title : "",
+      body : "",
+      postNo : -1
+    }
+  };
   whythismake = () => {};
   componentWillReceiveProps(nextProps) {
     this.setState(nextProps);
-    console.log(nextProps);
   }
-
   render() {
     return (
       <Modal
@@ -22,9 +27,9 @@ class PostModal extends Component {
         centered
       >
         <Modal.Header>
-          <Modal.Title>{this.state.title}</Modal.Title>
+          <Modal.Title>{this.state.selectedPost.title}</Modal.Title>
         </Modal.Header>
-        <Modal.Body>{this.state.body}</Modal.Body>
+        <Modal.Body>{this.state.selectedPost.body}</Modal.Body>
         <Modal.Footer>
           <Button
             size="sm"
