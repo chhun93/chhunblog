@@ -6,12 +6,12 @@ import "../../DecorateFiles/PostModal.css";
 
 class PostModal extends Component {
   state = {
-    modalUp : false,
-    selectedPost : {
-      title : "",
-      body : "",
-      postNo : -1
-    }
+    modalUp: false,
+    selectedPost: {
+      title: "",
+      body: "",
+      postNo: -1,
+    },
   };
   whythismake = () => {};
   componentWillReceiveProps(nextProps) {
@@ -33,17 +33,24 @@ class PostModal extends Component {
         <Modal.Footer>
           <Button
             size="sm"
-            variant="secondary"
-            onClick={() => this.props.dispatch(modal_up())}
-          >
-            Close
-          </Button>
-          <Button
-            size="sm"
-            variant="success"
+            variant="info"
             onClick={() => this.props.dispatch(modal_up())}
           >
             Delete
+          </Button>
+          <Button
+            size="sm"
+            variant="info"
+            onClick={() => this.props.dispatch(modal_up())}
+          >
+            Revise
+          </Button>
+          <Button
+            size="sm"
+            variant="info"
+            onClick={() => this.props.dispatch(modal_up())}
+          >
+            Close
           </Button>
         </Modal.Footer>
       </Modal>
